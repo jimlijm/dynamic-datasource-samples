@@ -18,7 +18,7 @@ public interface UserService extends IService<User> {
 
     List<User> selectSlaveAnnotationUsers();
 
-    void addUser(User user);
+    void addUser(User user) throws Exception;
 
     void deleteUserById(Long id);
 }
