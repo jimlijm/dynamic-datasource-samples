@@ -45,15 +45,12 @@ public class UserController {
 
     @PostMapping
     public User addUser() {
-        try {
-            User user = new User();
-            user.setName("测试用户" + RANDOM.nextInt());
-            user.setAge(RANDOM.nextInt(100));
-            userService.addUser(user);
-            return user;
-        }catch (Exception e){
-
-        }
+        User user = new User();
+        user.setName("测试用户" + RANDOM.nextInt());
+        user.setAge(RANDOM.nextInt(100));
+        userService.addUser(user);
+        return user;
+        
     }
 
     @DeleteMapping("/{id}")
