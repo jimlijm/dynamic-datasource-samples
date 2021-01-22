@@ -48,13 +48,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     @DS("master")
     @Transactional
-    public void addUser(User user) throws Exception {
-        try {
-            baseMapper.insert(user);
-            int i = 10 / 0;
-        }catch (ArithmeticException e){
-            throw new Exception("0为被除数");
-        }
+    public void addUser(User user)  {
+        
+         baseMapper.insert(user);
+         int i = 10 / 0;
+        
     }
 
     @Override
